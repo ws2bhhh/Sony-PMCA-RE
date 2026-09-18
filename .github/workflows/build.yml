@@ -3,7 +3,7 @@ on: workflow_dispatch
 jobs:
   PyInstaller:
     # runs-on: ${{ matrix.os }}
-    runs-on: windows-2019
+    runs-on: windows-2022
     strategy:
       fail-fast: false
       # matrix:
