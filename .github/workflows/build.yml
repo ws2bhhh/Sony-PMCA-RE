@@ -12,8 +12,8 @@ jobs:
       run:
         shell: bash
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
+    - uses: actions/checkout@v6.1.0
+    - uses: actions/setup-python@v7.0.0
       with:
         python-version: 3.6
     - name: Install libusb (windows)
@@ -40,7 +40,7 @@ jobs:
       run: |
         dist/pmca-console* -h
     - name: Upload
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v7.0.0
       with:
         name: ${{ runner.os }} binaries
         path: dist/*
